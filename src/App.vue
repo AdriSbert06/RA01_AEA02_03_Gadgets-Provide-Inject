@@ -1,26 +1,28 @@
+
 <script setup>
-import {reactive, provide } from 'vue';
+import { reactive, provide } from 'vue';
 import CategoryList from './components/CategoryList.vue';
 import Cart from './components/Cart.vue';
 
 const cart = reactive([]);
 
 const products = [
-{ name: "Auriculars Wireless 🎧", price: 50 },
-{ name: "Smartwatch ⌚", price: 120 },
-{ name: "Teclat Mecànic ⌨️", price: 80 },
-{ name: "Altaveu Bluetooth 🔊", price: 60 }
-]
+  { name: "Auriculars Wireless 🎧", price: 50 },
+  { name: "Smartwatch ⌚", price: 120 },
+  { name: "Teclat Mecànic ⌨️", price: 80 },
+  { name: "Altaveu Bluetooth 🔊", price: 60 }
+];
 
-provide('cart', cart)
-provide('products', products)
+provide('cart', cart);
+provide('products', products);
 </script>
 
 <template>
   <div class="appcontainer">
     <h1>Botiga de Gadgets</h1>
-    <CategoryList></CategoryList>
-    <Cart></Cart>
+
+    <CategoryList />
+
+    <Cart />
   </div>
-  
 </template>

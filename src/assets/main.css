@@ -1,35 +1,95 @@
-@import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+/* Estils de la botiga */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f3f6;
+    margin: 0;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.appcontainer {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+h1 {
+    text-align: center;
+    color: #263c5a;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+h2 {
+    color: #263c5a;
+}
 
-  #app {
+.products {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.product-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.price {
+    color: green;
+    font-weight: bold;
+}
+
+button {
+    background: #315b91;
+    color: white;
+    border: none;
+    padding: 9px 13px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cart {
+    background: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.cart li {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart li button {
+    background: #dc3545;
+    margin-left: 10px;
+}
+
+.total {
+    font-size: 22px;
+    font-weight: bold;
+    color: green;
+}
+
+.cart > button {
+    background: #dc3545;
+}
+
+@media (max-width: 600px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
 }
